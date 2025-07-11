@@ -7,23 +7,35 @@
 </head>
 <body>
     <h1> Game Page</h1>
+       <div id="rules">
+<h1> After you roll for the starting numbers the game will begin</h1>
+       </div>
     
-    <h1> After you roll for the starting numbers the game will begin</h1>
     
-    <div id="rules"> </div>
+  </div>
     <div id = "displayDice">
     <div id="diceFirst"> Dice 1:     Dice 2:   Dice 3: </div>
 
     <div id="diceSecond"> Dice 4:     Dice 5:   Dice 6: </div>
  </div>
+    <div id="startNum2"> Starting Number:  </div>
 
-    <div id="totalDice"> </div>
+
+
+    <div id="totalDice"></div>
 
     <div id="totalScore"></div>
-    
-    <div id="startNum"> Starting Number:  </div>
 
-    <div id="firstBut"> <button onclick="roll()"> Roll </button> </div>
+
+    <div id="firstBut"> <button id="roll" onclick="roll()"> Roll </button> </div>
+    <!-- <a href="kRound.html"><button id="conBtn"> Continue </button></a> -->
+    <button id="conBtn" onclick="start()"> Continue </button>
+
+
+    <div id="round2"> 
+
+        
+    </div>
     <script src="script.js"> </script>
 </body>
 
