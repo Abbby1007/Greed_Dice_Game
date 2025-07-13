@@ -6,10 +6,18 @@ const  startNumDisplay = document.getElementById("startNum");
 const totalDisplay = document.getElementById("totalScore");
 const totalDiceDisplay = document.getElementById("totalDice");
 const startNumDisplay2 = document.getElementById("startNum2");
+
+
+// buttons
 document.getElementById('conBtn').style.visibility = 'hidden';
 document.getElementById('endBtn1').style.visibility = 'hidden';
+// Round 2 buttons
+document.getElementById('conBtn2').style.visibility = 'hidden';
+document.getElementById('endBtn2').style.visibility = 'hidden';
+// Variables
 var StartingNum = 0;
 var highScore = 0;
+var round1Score = 0;s
 
 function highScore(r){
     // This function will be placed in each end to determine the highscore
@@ -54,14 +62,23 @@ document.getElementById('endBtn1').style.visibility = 'visible';
 }
 
 // SOME POINT IMPLEMENT A HIGHSCORE FUNCTION
+
+// ends after starting number
 function end1(){
 //removes the rules
-document.getElementById("firstBut").innerHTML=` Congrats your total score is ${StartingNum}. click "TRY AGAIN" to try and get a high score`
+document.getElementById("firstBut").innerHTML=` Congrats your total score is ${StartingNum}. click "TRY AGAIN" to try and get a higher score`
 // removes the start round 1 button
 document.getElementById('conBtn').style.visibility = 'hidden';
 document.getElementById('endBtn1').style.visibility = 'hidden';
 }
 
+// ends after Round 1. final score is starting num plus round 1 score
+function end2(){
+document.getElementById("results").innerHTML=` Congrats your total score is ${round1Score}. click "TRY AGAIN" to try and get a higher score`
+// remove Round 2 buttons
+document.getElementById('conBtn2').style.visibility = 'hidden';
+document.getElementById('endBtn2').style.visibility = 'hidden';
+}
 function start(){
 // Start of 1st Round
 // --------------------------------
@@ -85,18 +102,33 @@ diceDisplay2.textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6:
 
 const totalScore = StartingNum + diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 const totalRoll = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
-
+round1Score = totalScore
 totalDiceDisplay.textContent  =` Total Dice Roll: ${totalRoll}`
+
+document.getElementById('conBtn').style.visibility = 'hidden';
 //--------------------------------------------------------
 // depending on the results from the total dice roll
 // what gets displayed next will be determined
-
+// determines if the user can move on to Round 2
 if(totalRoll > 20){
-    document.getElementById("results").textContent = `Sorry youre dice roll was greater than 20`
+    document.getElementById("results").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
+    <h4> Your final score is : ${StartingNum}</h4>`
+}
+else{
+    totalDisplay.textContent = `Total Score (Diceroll + starting Number): ${totalScore}`
+    
+ document.getElementById("results").innerHTML = `<h4>  The dice total is under 20. </h4>
+  <h4> You can choose to stop and keep your total score of ${round1Score}. or move on to Round 2 </h4>` 
+document.getElementById('conBtn2').style.visibility = 'visible';
+document.getElementById('endBtn2').style.visibility = 'visible';
 }
 
-totalDisplay.textContent = `Total Score (Diceroll + starting Number): ${totalScore}`
-document.getElementById('conBtn').style.visibility = 'hidden';
+
 // End of 1st Round
 //------------------------------
+}
+
+function start2(){
+    document.getElementById("diceFirst2").textContent =` Dice 1:     Dice 2:   Dice 3: `;
+    document.getElementById("diceSecond2").textContent =`Dice 4:     Dice 5:   Dice 6: `;
 }

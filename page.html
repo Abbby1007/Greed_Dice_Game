@@ -38,17 +38,18 @@
     <div id="totalDice"></div>
 <!-- Div for the total amount from the dice end-->
 
-<!-- Div for the total amount from the dice and starting number start-->
-    <div id="totalScore"></div>
-<!-- Div for the total amount from the dice and starting number end-->
-
     <!-- This button will disappear after the starting number is rolled-->
     <div id="firstBut"> <button id="roll" onclick="roll()"> ROLL </button> </div>
-
-    <!-- This button will appear and allow the user to end-->
+<!-- Div for the total amount from the dice and starting number start-->
+   
+<div id="totalScore"></div>
+<!-- Div for the total amount from the dice and starting number end-->
+   
+<!-- This button will appear and allow the user to end-->
     <button id="endBtn1" onclick="end1()"> DONE </button>
     <!-- This button will appear to move the user to Round 1-->
-     <!-- Then it will disappear when the user rolls for Round 1-->
+    
+    <!-- Then it will disappear when the user rolls for Round 1-->
     <button id="conBtn" onclick="start()"> START ROUND 1 </button>
  <!-- END OF Starting Number / ROUND 1 -->
   <!-- -------------------------------------------      -->
@@ -66,8 +67,20 @@
         <!-- The user will roll. and it will be like a repeat of Round 1-->
     <div id="round2"> 
         <!-- This div will change depending on the outcome-->
-        <div id="results"> </div>
-        
+        <div id="results"> 
+<!-- Div for the first Dice start -->
+    <div id="diceFirst2"> </div>
+<!-- Div for the first Dice end -->
+
+ <!-- Div for the second Dice start -->
+    <div id="diceSecond2"> </div>
+<!-- Div for the second Dice end -->
+
+        </div>
+       <!-- This button will end Round 1-->
+         <button id="endBtn2" onclick="end2()"> DONE </button>
+    <!-- This button will send the user to Round 2-->
+    <button id="conBtn2" onclick="start2()"> START ROUND 2 </button>
     </div>
     <script src="script.js"> </script>
 </body>
