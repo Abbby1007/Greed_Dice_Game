@@ -65,23 +65,48 @@
 
        <!-- 3. The user decides to move on to Round 2. This means-->
         <!-- The user will roll. and it will be like a repeat of Round 1-->
-    <div id="round2"> 
+    
+    
+        <div id="round2"> 
         <!-- This div will change depending on the outcome-->
         <div id="results"> 
+        </div>
+
 <!-- Div for the first Dice start -->
-    <div id="diceFirst2"> </div>
+    <div id="diceFirst2">   </div>
 <!-- Div for the first Dice end -->
 
  <!-- Div for the second Dice start -->
-    <div id="diceSecond2"> </div>
+    <div id="diceSecond2">  </div>
 <!-- Div for the second Dice end -->
 
-        </div>
+<!-- Div for the total amount from the dice start-->
+    <div id="totalDice2"></div>
+<!-- Div for the total amount from the dice end-->
+
+<div id="totalScore2"></div>
+<!-- Div for the total amount from the dice and starting number end-->
+
        <!-- This button will end Round 1-->
          <button id="endBtn2" onclick="end2()"> DONE </button>
+
     <!-- This button will send the user to Round 2-->
     <button id="conBtn2" onclick="start2()"> START ROUND 2 </button>
+
     </div>
+
+    <!-- Round 2 end -->
+
+    <!-- Round 3 start -->
+     <!-- Round 3 will have three possibilites -->
+
+     <div id="results2"> 
+               <!-- This button will end Round 2-->
+         <button id="endBtn3" onclick="end3()"> DONE </button>
+
+    <!-- This button will send the user to Round 3-->
+    <button id="conBtn3" onclick="start3()"> START ROUND 3 </button>
+     </div>
     <script src="script.js"> </script>
 </body>
 

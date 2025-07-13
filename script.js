@@ -14,6 +14,9 @@ document.getElementById('endBtn1').style.visibility = 'hidden';
 // Round 2 buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
 document.getElementById('endBtn2').style.visibility = 'hidden';
+// Round 3 buttons
+document.getElementById('conBtn3').style.visibility = 'hidden';
+document.getElementById('endBtn3').style.visibility = 'hidden';
 // Variables
 var StartingNum = 0;
 var highScore = 0;
@@ -63,6 +66,7 @@ document.getElementById('endBtn1').style.visibility = 'visible';
 
 // SOME POINT IMPLEMENT A HIGHSCORE FUNCTION
 
+// ------------- END FUNCTIONS start ----------------
 // ends after starting number
 function end1(){
 //removes the rules
@@ -79,6 +83,11 @@ document.getElementById("results").innerHTML=` Congrats your total score is ${ro
 document.getElementById('conBtn2').style.visibility = 'hidden';
 document.getElementById('endBtn2').style.visibility = 'hidden';
 }
+
+
+// -------------END FUNCTIONS end -------------- 
+
+// START 1
 function start(){
 // Start of 1st Round
 // --------------------------------
@@ -128,7 +137,51 @@ document.getElementById('endBtn2').style.visibility = 'visible';
 //------------------------------
 }
 
+// START 2
 function start2(){
-    document.getElementById("diceFirst2").textContent =` Dice 1:     Dice 2:   Dice 3: `;
-    document.getElementById("diceSecond2").textContent =`Dice 4:     Dice 5:   Dice 6: `;
+   
+    // hide round 2 Buttons
+document.getElementById('conBtn2').style.visibility = 'hidden';
+document.getElementById('endBtn2').style.visibility = 'hidden';
+
+// put a title for Round 2 and a line
+document.getElementById("results").innerHTML = `<h3> ---------------------------------- </h3>
+<h3> Round 2 </h3>`
+
+// round 2 Dice
+const diceOne = Math.floor(Math.random() * 6) + 1;
+const diceTwo = Math.floor(Math.random() * 6) + 1;
+const diceThree = Math.floor(Math.random() * 6) + 1;
+const diceFour = Math.floor(Math.random() * 6) + 1;
+const diceFive = Math.floor(Math.random() * 6) + 1;
+const diceSix = Math.floor(Math.random() * 6) + 1;
+
+const totalRoll = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
+const totalScore = round1Score + StartingNum + totalRoll;
+
+
+// display of round 2 Dice
+    document.getElementById("diceFirst2").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+
+    document.getElementById("diceSecond2").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
+
+    document.getElementById("totalDice2").innerHTML = ` <h4>Total Dice Roll: ${totalRoll}</h4>`
+
+    if(totalRoll > 20){
+    document.getElementById("results2").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
+    <h4> Your final score is : ${StartingNum}</h4>`
+}
+else{
+    document.getElementById.innerHTML = ` <h4> Total Score (Diceroll + starting Number): ${totalScore} </h4>`
+    
+ document.getElementById("results2").innerHTML = `<h4>  The dice total is under 20. </h4>
+  <h4> You can choose to stop and keep your total score of ${totalScore}. or move on to Round 3 </h4>` 
+  document.getElementById('conBtn3').style.visibility = 'visible';
+document.getElementById('endBtn3').style.visibility = 'visible';
+// create buttons to be done or advance to Round 3
+}
+}
+
+function start3(){
+    // hey
 }
