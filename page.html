@@ -6,34 +6,67 @@
     <title>Game Page</title>
 </head>
 <body>
+
     <h1> Game Page</h1>
+<!-- START OF Starting Number / ROUND 1 -->
+   <!-- -------------------------------------------      -->
+    <!-- This div explains the instrauctions for Starting Number and Round 1  -->
        <div id="rules">
 <h1> After you roll for the starting numbers the game will begin</h1>
        </div>
-    
+    <!-- Instructions div -->
     
   </div>
+  <!-- Div for all the dice -->
     <div id = "displayDice">
+
+<!-- Div for the first Dice start -->
     <div id="diceFirst"> Dice 1:     Dice 2:   Dice 3: </div>
+<!-- Div for the first Dice end -->
 
+ <!-- Div for the second Dice start -->
     <div id="diceSecond"> Dice 4:     Dice 5:   Dice 6: </div>
+<!-- Div for the second Dice end -->
  </div>
+ <!-- Dice Div end -->
+
+  <!-- Display for the starting number start-->
     <div id="startNum2"> Starting Number:  </div>
+  <!-- Display for the starting number end-->
 
-
-
+<!-- Div for the total amount from the dice start-->
     <div id="totalDice"></div>
+<!-- Div for the total amount from the dice end-->
 
+<!-- Div for the total amount from the dice and starting number start-->
     <div id="totalScore"></div>
+<!-- Div for the total amount from the dice and starting number end-->
+
+    <!-- This button will disappear after the starting number is rolled-->
+    <div id="firstBut"> <button id="roll" onclick="roll()"> ROLL </button> </div>
+
+    <!-- This button will appear and allow the user to end-->
+    <button id="endBtn1" onclick="end1()"> DONE </button>
+    <!-- This button will appear to move the user to Round 1-->
+     <!-- Then it will disappear when the user rolls for Round 1-->
+    <button id="conBtn" onclick="start()"> START ROUND 1 </button>
+ <!-- END OF Starting Number / ROUND 1 -->
+  <!-- -------------------------------------------      -->
 
 
-    <div id="firstBut"> <button id="roll" onclick="roll()"> Roll </button> </div>
-    <!-- <a href="kRound.html"><button id="conBtn"> Continue </button></a> -->
-    <button id="conBtn" onclick="start()"> Continue </button>
+    <!-- Round 2 will have three possible outcomes-->
 
+     <!-- 1. The total dice roll is greater than 20. This means the  -->
+      <!-- User's final score will be their starting number-->
 
+      <!-- 2. The user decides to end it at Round 1. This means-->
+       <!-- User's final score will be their round 1 roll plus their starting number-->
+
+       <!-- 3. The user decides to move on to Round 2. This means-->
+        <!-- The user will roll. and it will be like a repeat of Round 1-->
     <div id="round2"> 
-
+        <!-- This div will change depending on the outcome-->
+        <div id="results"> </div>
         
     </div>
     <script src="script.js"> </script>
