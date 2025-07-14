@@ -84,7 +84,7 @@ document.getElementById('endBtn2').style.visibility = 'hidden';
 function start(){
 // Start of 1st Round
 // --------------------------------
-document.getElementById("firstBut").innerHTML=``
+// document.getElementById("firstBut").innerHTML=``
 
 // document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${startNumt} `;
 document.getElementById("rules").innerHTML = `<h3> Round 1 </h3>`
