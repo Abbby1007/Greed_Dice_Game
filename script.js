@@ -224,7 +224,7 @@ document.getElementById('endBtn3').style.visibility = 'visible';
 }
 // Start Round 3
 function start3(){
-    // document.getElementById("round2").innerHTML = ` `; 
+document.getElementById("round2").style.visibility = `hidden`; 
     // hide round 3 Buttons
 document.getElementById('conBtn3').style.visibility = 'hidden';
 document.getElementById('endBtn3').style.visibility = 'hidden';
