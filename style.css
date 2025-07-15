@@ -3,6 +3,12 @@ div{
 margin-inline: auto; */
 text-align: center;
 }
+
+/* Button to activate the rules */
+/* #rulesBtn{
+
+} */
+
 body{
    background-color: 	#efdff9; 
 }

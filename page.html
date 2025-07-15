@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<button id="rulesBtn" onclick="rules()"> RULES </button>
 <div id="begin"> 
 <!-- START OF Starting Number / ROUND 1 -->
    <!-- --------------------------------------------->
@@ -32,7 +32,7 @@
  <!-- Dice Div end -->
 
   <!-- Display for the starting number start-->
-    <div id="startNum2"> Starting Number:  </div>
+    <div id="startNum"> Starting Number:  </div>
   <!-- Display for the starting number end-->
 
 
@@ -59,6 +59,13 @@
     
     <!-- Then it will disappear when the user rolls for Round 1-->
     <button id="conBtn" onclick="start()"> START ROUND 1 </button>
+    <div id="endResults1"></div>
+
+           <!-- This button will end Round 1-->
+         <button id="endBtn2" onclick="end2()"> DONE </button>
+
+    <!-- This button will send the user to Round 2-->
+    <button id="conBtn2" onclick="start2()"> START ROUND 2 </button>
  <!-- END OF Starting Number / ROUND 1 -->
   <!-- -------------------------------------------      -->
 </div>
@@ -79,6 +86,9 @@
         <!-- This div will change depending on the outcome-->
         <div id="results"> 
         </div>
+  <!-- Display for the starting number start-->
+    <div id="startNum2"></div>
+  <!-- Display for the starting number end-->
 
 <!-- Div for the first Dice start -->
     <div id="diceFirst2">   </div>
@@ -95,11 +105,12 @@
 <div id="totalScore2"></div>
 <!-- Div for the total amount from the dice and starting number end-->
 
-       <!-- This button will end Round 1-->
-         <button id="endBtn2" onclick="end2()"> DONE </button>
+    <div id="endResults2"></div>
+                   <!-- This button will end Round 2-->
+         <button id="endBtn3" onclick="end3()"> DONE </button>
 
-    <!-- This button will send the user to Round 2-->
-    <button id="conBtn2" onclick="start2()"> START ROUND 2 </button>
+    <!-- This button will send the user to Round 3-->
+    <button id="conBtn3" onclick="start3()"> START ROUND 3 </button>
 
     </div>
 
@@ -110,6 +121,9 @@
 
      <div id="results2"> 
      </div>
+  <!-- Display for the starting number start-->
+    <div id="startNum3"></div>
+  <!-- Display for the starting number end-->
 
      <!-- Div for the first Dice start -->
     <div id="diceFirst3">   </div>
@@ -125,18 +139,15 @@
 
 <div id="totalScore3"></div>
 <!-- Div for the total amount from the dice and starting number end-->
-                    <!-- This button will end Round 2-->
-         <button id="endBtn3" onclick="end3()"> DONE </button>
 
-    <!-- This button will send the user to Round 3-->
-    <button id="conBtn3" onclick="start3()"> START ROUND 3 </button>
 
 <!-- Round 3 ends-->
+     <div id="results3"> 
+     </div>
  </div>
 <!-- Will revela whether the user won or lost-->
 
-     <div id="results3"> 
-     </div>
+ 
 
     <script src="script.js"> </script>
 </body>
