@@ -8,8 +8,12 @@ const totalDiceDisplay = document.getElementById("totalDice");
 const startNumDisplay2 = document.getElementById("startNum2");
 
 
-// buttons
+// buttons start ----------
+
+// random buttons 
 document.getElementById("rulesBtn").style.visibility = 'hidden';
+
+//Round 1
 document.getElementById('conBtn').style.visibility = 'hidden';
 // Round 2 buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
@@ -17,6 +21,8 @@ document.getElementById('endBtn2').style.visibility = 'hidden';
 // Round 3 buttons
 document.getElementById('conBtn3').style.visibility = 'hidden';
 document.getElementById('endBtn3').style.visibility = 'hidden';
+// buttons end ----------------------
+
 // Variables
 var StartingNum = 0;
 var highScore = 0;
@@ -68,6 +74,8 @@ document.getElementById('endBtn1').style.visibility = 'visible';
 }
 
 // SOME POINT IMPLEMENT A HIGHSCORE FUNCTION
+
+
 
 // ------------- END FUNCTIONS start ----------------
 // ends after starting number
@@ -142,7 +150,10 @@ document.getElementById('conBtn').style.visibility = 'hidden';
 // determines if the user can move on to Round 2
 if(totalRoll > 20){
     document.getElementById("endResults1").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4>`
+    <h4> Your final score is : ${StartingNum}</h4>
+    <h4> Click "TRY AGAIN" to try an get a higher score </h4>
+<a href="page.html"><button>TRY AGAIN </button> </a>`
+
 }
 else{
     totalDisplay.textContent = `Total Score (Diceroll + starting Number): ${totalScore}`
@@ -160,7 +171,8 @@ document.getElementById('endBtn2').style.visibility = 'visible';
 
 // START 2
 function start2(){
-// document.getElementById("begin").innerHTML = ` `; 
+document.getElementById("begin").style.visibility = `hidden`; 
+
     // hide round 2 Buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
 document.getElementById('endBtn2').style.visibility = 'hidden';
@@ -195,7 +207,10 @@ round2Score = totalScore
 
     if(totalRoll > 20){
     document.getElementById("endResults2").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4>`
+    <h4> Your final score is : ${StartingNum}</h4> 
+     <h4> Click "TRY AGAIN" to try an get a higher score </h4>
+     <a href="page.html"><button>TRY AGAIN </button> </a>`
+    //  document.getElementById("tryAgain2").style.visibility = 'hidden';
 }
 else{
     document.getElementById("totalScore2").innerHTML = ` <h4> Round 2 Total Score (Diceroll + starting Number): ${round2Score} </h4>`
@@ -242,7 +257,10 @@ document.getElementById("startNum3").innerHTML = `<h3> Starting Number: ${Starti
 
     if(totalRoll > 20){
     document.getElementById("results3").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4>`
+    <h4> Your final score is : ${StartingNum}</h4>
+     <h4> Click "TRY AGAIN" to try an get a higher score </h4>
+     <a href="page.html"><button>TRY AGAIN </button> </a>`
+    //  document.getElementById("tryAgain3").style.visibility = 'hidden';
 }
 else{
     document.getElementById("totalScore3").innerHTML = ` <h4> Round 3 
