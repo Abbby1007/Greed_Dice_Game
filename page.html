@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1> Game Page</h1>
+<div id="begin"> 
 <!-- START OF Starting Number / ROUND 1 -->
-   <!-- -------------------------------------------      -->
+   <!-- --------------------------------------------->
     <!-- This div explains the instrauctions for Starting Number and Round 1  -->
        <div id="rules">
-<h1> After you roll for the starting numbers the game will begin</h1>
+<h1> After you roll for the starting number the game will begin</h1>
        </div>
     <!-- Instructions div -->
     
-  </div>
+  
   <!-- Div for all the dice -->
     <div id = "displayDice">
 
@@ -34,13 +35,21 @@
     <div id="startNum2"> Starting Number:  </div>
   <!-- Display for the starting number end-->
 
+
+    <!-- This button will disappear after the starting number is rolled-->
+    <div id="firstBut"> <button id="roll" onclick="roll()"> ROLL </button> </div>
+
+    <!-- New Place for the Dice During Round 1 Start -->
+    <div id="dicePlace1"> </div>
+
+    <div id="dicePlace2"> </div>
+<!-- New Place for the Dice During Round 1 End -->
+
 <!-- Div for the total amount from the dice start-->
     <div id="totalDice"></div>
 <!-- Div for the total amount from the dice end-->
 
-    <!-- This button will disappear after the starting number is rolled-->
-    <div id="firstBut"> <button id="roll" onclick="roll()"> ROLL </button> </div>
-<!-- Div for the total amount from the dice and starting number start-->
+    <!-- Div for the total amount from the dice and starting number start-->
    
 <div id="totalScore"></div>
 <!-- Div for the total amount from the dice and starting number end-->
@@ -52,7 +61,7 @@
     <button id="conBtn" onclick="start()"> START ROUND 1 </button>
  <!-- END OF Starting Number / ROUND 1 -->
   <!-- -------------------------------------------      -->
-
+</div>
 
     <!-- Round 2 will have three possible outcomes-->
 
@@ -95,7 +104,7 @@
     </div>
 
     <!-- Round 2 end -->
-
+<div id="round3">
     <!-- Round 3 start -->
      <!-- Round 3 will have three possibilites -->
 
@@ -123,6 +132,7 @@
     <button id="conBtn3" onclick="start3()"> START ROUND 3 </button>
 
 <!-- Round 3 ends-->
+ </div>
 <!-- Will revela whether the user won or lost-->
 
      <div id="results3"> 

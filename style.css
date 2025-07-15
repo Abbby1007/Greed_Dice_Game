@@ -1,0 +1,37 @@
+div{
+ /* max-width: fit-content;
+margin-inline: auto; */
+text-align: center;
+}
+body{
+   background-color: 	#efdff9; 
+}
+#begin{
+    background-color: #e7d0f5;
+}
+
+#round2{
+    background-color: #dcc0ec ;
+}
+
+#round3{
+    background-color:#ccaedb ;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
+h3{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
