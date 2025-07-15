@@ -1,6 +1,7 @@
 div{
  /* max-width: fit-content;
 margin-inline: auto; */
+margin:0;
 text-align: center;
 }
 
@@ -14,14 +15,29 @@ body{
 }
 #begin{
     background-color: #e7d0f5;
+    border-radius: 8px;
+    border-color: black;
+  border-style: solid;
+  /* border-width: thin; */
 }
 
 #round2{
     background-color: #dcc0ec ;
+    border-radius: 8px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin medium;
 }
 
 #round3{
     background-color:#ccaedb ;
+    border-radius: 8px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin medium;
+}
+#rules{
+    font-size: 3rem;
 }
 
 h1{
