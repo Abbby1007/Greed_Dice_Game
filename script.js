@@ -48,11 +48,14 @@ const diceSix = Math.floor(Math.random() * 6) + 1;
 // adds up the starting Number
 StartingNum  = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 
-
 // displays the dice rolls and starting number results
-diceDisplay1.textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
 
-diceDisplay2.textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
+// diceDisplay1.textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+
+// diceDisplay2.textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
+
+diceDisplay1.innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+diceDisplay2.innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
 
 document.getElementById("startNum").innerHTML = `<h3> Starting Number: ${StartingNum} `;
 
@@ -134,15 +137,18 @@ diceDisplay1.textContent = ``
 diceDisplay2.textContent = ``
 
 // displays the results from the round 1 dice roll
-document.getElementById("dicePlace1").innerHTML = `<h4> Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree} </h4>`
+document.getElementById("dicePlace1").innerHTML = `<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+document.getElementById("dicePlace2").innerHTML = `<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
 
-document.getElementById("dicePlace2").innerHTML = `<h4> Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix} </h4>`
+// document.getElementById("dicePlace1").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+// document.getElementById("dicePlace2").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
+
 
 
 const totalScore = StartingNum + diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 const totalRoll = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 round1Score = totalScore
-totalDiceDisplay.innerHTML =`<h4> Total Dice Roll: ${totalRoll} </h4>`
+totalDiceDisplay.textContent  =` Total Dice Roll: ${totalRoll}`
 
 document.getElementById('conBtn').style.visibility = 'hidden';
 //--------------------------------------------------------
@@ -157,7 +163,7 @@ if(totalRoll > 20){
 
 }
 else{
-    totalDisplay.innerHTML = ` <h4> Total Score (Diceroll + starting Number): ${totalScore} </h4>`
+    totalDisplay.textContent = `Total Score (Diceroll + starting Number): ${totalScore}`
     
  document.getElementById("endResults1").innerHTML = `<h4>  The dice total is under 20. </h4>
   <h4> You can choose to stop and keep your total score of ${round1Score}. or move on to Round 2 </h4>` 
@@ -196,11 +202,14 @@ round2Score = totalScore
 
 
 // display of round 2 Dice
-    document.getElementById("diceFirst2").innerHTML = ` <h4> Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree} </h4>`
+    // document.getElementById("diceFirst2").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+    // document.getElementById("diceSecond2").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
 
-    document.getElementById("diceSecond2").innerHTML = `<h4> Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix} </h4>`
+document.getElementById("diceFirst2").innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
 
-    document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${StartingNum} `;
+document.getElementById("diceSecond2").innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
+    
+document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${StartingNum} `;
 
     
 
@@ -250,9 +259,12 @@ round3Score = totalScore
 document.getElementById("startNum3").innerHTML = `<h3> Starting Number: ${StartingNum} `;
 
 // display of round 3 Dice
-    document.getElementById("diceFirst3").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+    // document.getElementById("diceFirst3").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
+    // document.getElementById("diceSecond3").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
 
-    document.getElementById("diceSecond3").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
+    document.getElementById("diceFirst3").innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+
+    document.getElementById("diceSecond3").innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
 
     document.getElementById("totalDice3").innerHTML = ` <h4>Total Dice Roll: ${totalRoll}</h4>`
 
@@ -274,3 +286,18 @@ else{
 }
 
 }
+
+function testDice(){
+    // const values = [];
+    // const images = [];
+
+const diceOne = Math.floor(Math.random() * 6) + 1;
+const diceTwo = Math.floor(Math.random() * 6) + 1;
+const diceThree = Math.floor(Math.random() * 6) + 1;
+// const diceFour = Math.floor(Math.random() * 6) + 1;
+// const diceFive = Math.floor(Math.random() * 6) + 1;
+// const diceSix = Math.floor(Math.random() * 6) + 1;
+    // document.getElementById("diceResult").textContent = `${value}`;
+    document.getElementById("diceImages").innerHTML = `<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+}
+
