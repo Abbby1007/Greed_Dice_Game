@@ -54,8 +54,8 @@ StartingNum  = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 
 // diceDisplay2.textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
 
-diceDisplay1.innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
-diceDisplay2.innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
+diceDisplay1.innerHTML =`<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
+diceDisplay2.innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
 
 document.getElementById("startNum").innerHTML = `<h3> Starting Number: ${StartingNum} `;
 
@@ -137,8 +137,8 @@ diceDisplay1.textContent = ``
 diceDisplay2.textContent = ``
 
 // displays the results from the round 1 dice roll
-document.getElementById("dicePlace1").innerHTML = `<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
-document.getElementById("dicePlace2").innerHTML = `<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
+document.getElementById("dicePlace1").innerHTML = `<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
+document.getElementById("dicePlace2").innerHTML = `<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
 
 // document.getElementById("dicePlace1").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
 // document.getElementById("dicePlace2").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
@@ -205,9 +205,9 @@ round2Score = totalScore
     // document.getElementById("diceFirst2").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
     // document.getElementById("diceSecond2").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
 
-document.getElementById("diceFirst2").innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+document.getElementById("diceFirst2").innerHTML =`<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
 
-document.getElementById("diceSecond2").innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
+document.getElementById("diceSecond2").innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
     
 document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${StartingNum} `;
 
@@ -262,9 +262,9 @@ document.getElementById("startNum3").innerHTML = `<h3> Starting Number: ${Starti
     // document.getElementById("diceFirst3").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
     // document.getElementById("diceSecond3").textContent = ` Dice 4: ${diceFour}    Dice 5: ${diceFive}  Dice 6: ${diceSix}`
 
-    document.getElementById("diceFirst3").innerHTML =`<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+    document.getElementById("diceFirst3").innerHTML =`<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
 
-    document.getElementById("diceSecond3").innerHTML =`<img src="dice_Images/${diceFour}.png"><img src="dice_Images/${diceFive}.png"><img src="dice_Images/${diceSix}.png">`;
+    document.getElementById("diceSecond3").innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
 
     document.getElementById("totalDice3").innerHTML = ` <h4>Total Dice Roll: ${totalRoll}</h4>`
 
@@ -298,6 +298,6 @@ const diceThree = Math.floor(Math.random() * 6) + 1;
 // const diceFive = Math.floor(Math.random() * 6) + 1;
 // const diceSix = Math.floor(Math.random() * 6) + 1;
     // document.getElementById("diceResult").textContent = `${value}`;
-    document.getElementById("diceImages").innerHTML = `<img src="dice_Images/${diceOne}.png"><img src="dice_Images/${diceTwo}.png"><img src="dice_Images/${diceThree}.png">`;
+    document.getElementById("diceImages").innerHTML = `<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
 }
 
