@@ -27,7 +27,8 @@ document.getElementById('endBtn3').style.visibility = 'hidden';
 
 // Variables
 var StartingNum = 0;
-var highScore = 0;
+var highScore = localStorage.getItem("num");
+
 var round1Score = 0;
 var round2Score = 0;
 var round3Score = 0;
@@ -35,6 +36,13 @@ var round3Score = 0;
 // function highScore(r){
 //     // This function will be placed in each end to determine the highscore
 // }
+
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`
+function restartHighScore(){
+highScore = 0;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`
+}
 
 function roll(){
 //----------------------------------------------------------
@@ -90,6 +98,12 @@ document.getElementById('endBtn1').style.visibility = 'visible';
 function end2(){
 document.getElementById("endResults1Con").innerHTML=`<h3> Congrats your total score is ${round1Score}. click "TRY AGAIN" to try and get a higher score </h3>
 <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
+if(round1Score > highScore){
+highScore = round1Score;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
+
 // remove Round 2 buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
 document.getElementById('endBtn2').style.visibility = 'hidden';
@@ -97,7 +111,12 @@ document.getElementById('endBtn2').style.visibility = 'hidden';
 
 function end3(){
    document.getElementById("endResults2Con").innerHTML=` <h3> Congrats your total score is ${round2Score}. click "TRY AGAIN" to try and get a higher score </h3> <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
-// remove Round 3 buttons
+if(round2Score > highScore){
+highScore = round2Score;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
+   // remove Round 3 buttons
 document.getElementById('conBtn3').style.visibility = 'hidden';
 document.getElementById('endBtn3').style.visibility = 'hidden'; 
 }
@@ -172,13 +191,19 @@ if(totalRoll > 20){
     <h4> Click "TRY AGAIN" to try an get a higher score </h4>
 <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 
+if(StartingNum > highScore){
+highScore = StartingNum;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
+
 }
 else{
     totalDisplay.innerHTML = ` <h3 id="totalS"> Total Score (Diceroll + starting Number): ${totalScore} </h3>`
     
  document.getElementById("endResults1").innerHTML = `<h4>  The dice total is under 20. </h4>
   <h4> You can choose to stop and keep your total score of ${round1Score}. or move on to Round 2 </h4>` 
-document.getElementById('conBtn2').style.visibility = 'visible';
+  document.getElementById('conBtn2').style.visibility = 'visible';
 document.getElementById('endBtn2').style.visibility = 'visible';
 }
 
@@ -231,7 +256,11 @@ document.getElementById("startNum2").innerHTML = `<h2> Starting Number: ${Starti
     <h4 id="final"> Your final score is : ${StartingNum}</h4> 
      <h4> Click "TRY AGAIN" to try an get a higher score </h4>
      <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
-    //  document.getElementById("tryAgain2").style.visibility = 'hidden';
+if(StartingNum > highScore){
+highScore = StartingNum;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
 }
 else{
     document.getElementById("totalScore2").innerHTML = ` <h4 id="totalS"> Total Score: ${round2Score} </h4>`
@@ -285,6 +314,11 @@ document.getElementById("startNum3").innerHTML = `<h2> Starting Number: ${Starti
      <h4> Click "TRY AGAIN" to try an get a higher score </h4>
      <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 
+if(StartingNum > highScore){
+highScore = StartingNum;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
 }
 else{
     document.getElementById("totalScore3").innerHTML = ` <h4> Round 3 
@@ -293,22 +327,14 @@ else{
  document.getElementById("results3").innerHTML = `<h4>  The dice total is under 20. </h4>
   <h4 id="final"> congrats you have a final score of: ${round3Score} </h4>` 
 
-
+if(round3Score > highScore){
+highScore = round3Score;
+localStorage.setItem("num",highScore);
+document.getElementById("highScore").innerHTML = `<h2> Your HighScore: ${highScore} </h2>`;
+}
 }
 
 }
 
-function testDice(){
-    // const values = [];
-    // const images = [];
 
-const diceOne = Math.floor(Math.random() * 6) + 1;
-const diceTwo = Math.floor(Math.random() * 6) + 1;
-const diceThree = Math.floor(Math.random() * 6) + 1;
-// const diceFour = Math.floor(Math.random() * 6) + 1;
-// const diceFive = Math.floor(Math.random() * 6) + 1;
-// const diceSix = Math.floor(Math.random() * 6) + 1;
-    // document.getElementById("diceResult").textContent = `${value}`;
-    document.getElementById("diceImages").innerHTML = `<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
-}
 
