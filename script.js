@@ -7,12 +7,14 @@ const totalDisplay = document.getElementById("totalScore");
 const totalDiceDisplay = document.getElementById("totalDice");
 const startNumDisplay2 = document.getElementById("startNum2");
 
+// div visibility
+document.getElementById("round2").style.visibility = `hidden`; 
+document.getElementById("round3").style.visibility = `hidden`; 
 
 // buttons start ----------
 
 // random buttons 
 document.getElementById("rulesBtn").style.visibility = 'hidden';
-
 //Round 1
 document.getElementById('conBtn').style.visibility = 'hidden';
 // Round 2 buttons
@@ -57,7 +59,7 @@ StartingNum  = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 diceDisplay1.innerHTML =`<img src="${diceOne}.png"><img src="${diceTwo}.png"><img src="${diceThree}.png">`;
 diceDisplay2.innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
 
-document.getElementById("startNum").innerHTML = `<h3> Starting Number: ${StartingNum} `;
+document.getElementById("startNum").innerHTML = `<h2> Starting Number: ${StartingNum} </h2>`;
 
 
 document.getElementById('roll').style.visibility = 'hidden';
@@ -86,14 +88,15 @@ document.getElementById('endBtn1').style.visibility = 'visible';
 
 // ends after Round 1. final score is starting num plus round 1 score
 function end2(){
-document.getElementById("results").innerHTML=` Congrats your total score is ${round1Score}. click "TRY AGAIN" to try and get a higher score`
+document.getElementById("endResults1Con").innerHTML=`<h3> Congrats your total score is ${round1Score}. click "TRY AGAIN" to try and get a higher score </h3>
+<a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 // remove Round 2 buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
 document.getElementById('endBtn2').style.visibility = 'hidden';
 }
 
 function end3(){
-   document.getElementById("results").innerHTML=` Congrats your total score is ${round2Score}. click "TRY AGAIN" to try and get a higher score`
+   document.getElementById("endResults2Con").innerHTML=` <h3> Congrats your total score is ${round2Score}. click "TRY AGAIN" to try and get a higher score </h3> <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 // remove Round 3 buttons
 document.getElementById('conBtn3').style.visibility = 'hidden';
 document.getElementById('endBtn3').style.visibility = 'hidden'; 
@@ -107,7 +110,15 @@ function rules(){
 <h3> You will have a total of 3 Rounds to get the highest Score possible </h3>
 <h3> In each round if the six roll a total of more then 20 you loose all your points and only keep the starting number </h3> 
 <h3> You can choose to not move on to the next round and keep your score by pressing "DONE" at the end of each round</h3>
+<h3> click "CLOSE" to make the rules disappear </h3>
 `  
+
+document.getElementById('closeRulesBtn').style.visibility = 'visible';
+}
+
+function close(){
+document.getElementById("firstBut").textContent = ''
+   document.getElementById('closeRulesBtn').style.visibility = 'hidden'; 
 }
 
 // rules function ends ----
@@ -119,7 +130,7 @@ function start(){
 document.getElementById("firstBut").innerHTML = ` `
 document.getElementById("rulesBtn").style.visibility = 'visible';
 
-// document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${startNumt} `;
+
 document.getElementById("rules").innerHTML = `<h3> Round 1 </h3>`
 
 // rolls dice for the user's round 1 score
@@ -148,7 +159,7 @@ document.getElementById("dicePlace2").innerHTML = `<img src="${diceFour}.png"><i
 const totalScore = StartingNum + diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 const totalRoll = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 round1Score = totalScore
-totalDiceDisplay.textContent  =` Total Dice Roll: ${totalRoll}`
+totalDiceDisplay.innerHTML  =`<h3> Total Dice Roll: ${totalRoll} </h3>`
 
 document.getElementById('conBtn').style.visibility = 'hidden';
 //--------------------------------------------------------
@@ -157,13 +168,13 @@ document.getElementById('conBtn').style.visibility = 'hidden';
 // determines if the user can move on to Round 2
 if(totalRoll > 20){
     document.getElementById("endResults1").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4>
+    <h4 id="final"> Your final score is : ${StartingNum}</h4>
     <h4> Click "TRY AGAIN" to try an get a higher score </h4>
-<a href="page.html"><button>TRY AGAIN </button> </a>`
+<a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 
 }
 else{
-    totalDisplay.textContent = `Total Score (Diceroll + starting Number): ${totalScore}`
+    totalDisplay.innerHTML = ` <h3 id="totalS"> Total Score (Diceroll + starting Number): ${totalScore} </h3>`
     
  document.getElementById("endResults1").innerHTML = `<h4>  The dice total is under 20. </h4>
   <h4> You can choose to stop and keep your total score of ${round1Score}. or move on to Round 2 </h4>` 
@@ -178,7 +189,7 @@ document.getElementById('endBtn2').style.visibility = 'visible';
 
 // START 2
 function start2(){
-document.getElementById("begin").style.visibility = `hidden`; 
+document.getElementById("round2").style.visibility = `visible`; 
 
     // hide round 2 Buttons
 document.getElementById('conBtn2').style.visibility = 'hidden';
@@ -209,7 +220,7 @@ document.getElementById("diceFirst2").innerHTML =`<img src="${diceOne}.png"><img
 
 document.getElementById("diceSecond2").innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
     
-document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${StartingNum} `;
+document.getElementById("startNum2").innerHTML = `<h2> Starting Number: ${StartingNum} </h2>`;
 
     
 
@@ -217,13 +228,13 @@ document.getElementById("startNum2").innerHTML = `<h3> Starting Number: ${Starti
 
     if(totalRoll > 20){
     document.getElementById("endResults2").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4> 
+    <h4 id="final"> Your final score is : ${StartingNum}</h4> 
      <h4> Click "TRY AGAIN" to try an get a higher score </h4>
-     <a href="page.html"><button>TRY AGAIN </button> </a>`
+     <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
     //  document.getElementById("tryAgain2").style.visibility = 'hidden';
 }
 else{
-    document.getElementById("totalScore2").innerHTML = ` <h4> Round 2 Total Score (Diceroll + starting Number): ${round2Score} </h4>`
+    document.getElementById("totalScore2").innerHTML = ` <h4 id="totalS"> Total Score: ${round2Score} </h4>`
     
  document.getElementById("endResults2").innerHTML = `<h4>  The dice total is under 20. </h4>
   <h4> You can choose to stop and keep your total score of ${totalScore}. or move on to Round 3 </h4>` 
@@ -234,7 +245,7 @@ document.getElementById('endBtn3').style.visibility = 'visible';
 }
 // Start Round 3
 function start3(){
-document.getElementById("round2").style.visibility = `hidden`; 
+document.getElementById("round3").style.visibility = `visible`; 
     // hide round 3 Buttons
 document.getElementById('conBtn3').style.visibility = 'hidden';
 document.getElementById('endBtn3').style.visibility = 'hidden';
@@ -256,7 +267,7 @@ const totalRoll = diceOne + diceTwo + diceThree + diceFour + diceFive + diceSix;
 const totalScore = round1Score + round2Score + StartingNum + totalRoll;
 round3Score = totalScore
 
-document.getElementById("startNum3").innerHTML = `<h3> Starting Number: ${StartingNum} `;
+document.getElementById("startNum3").innerHTML = `<h2> Starting Number: ${StartingNum} </h2> `;
 
 // display of round 3 Dice
     // document.getElementById("diceFirst3").textContent = ` Dice 1: ${diceOne}    Dice 2: ${diceTwo}  Dice 3: ${diceThree}`
@@ -266,21 +277,21 @@ document.getElementById("startNum3").innerHTML = `<h3> Starting Number: ${Starti
 
     document.getElementById("diceSecond3").innerHTML =`<img src="${diceFour}.png"><img src="${diceFive}.png"><img src="${diceSix}.png">`;
 
-    document.getElementById("totalDice3").innerHTML = ` <h4>Total Dice Roll: ${totalRoll}</h4>`
+    document.getElementById("totalDice3").innerHTML = ` <h4 id="totalS">Total Dice Roll: ${totalRoll}</h4>`
 
     if(totalRoll > 20){
     document.getElementById("results3").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4> Your final score is : ${StartingNum}</h4>
+    <h4 id="final"> Your final score is : ${StartingNum}</h4>
      <h4> Click "TRY AGAIN" to try an get a higher score </h4>
-     <a href="page.html"><button>TRY AGAIN </button> </a>`
-    //  document.getElementById("tryAgain3").style.visibility = 'hidden';
+     <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
+
 }
 else{
     document.getElementById("totalScore3").innerHTML = ` <h4> Round 3 
     Total Score (Diceroll + starting Number): ${round3Score} </h4>`
     
  document.getElementById("results3").innerHTML = `<h4>  The dice total is under 20. </h4>
-  <h4> congrats you have a final score of: ${round3Score} </h4>` 
+  <h4 id="final"> congrats you have a final score of: ${round3Score} </h4>` 
 
 
 }

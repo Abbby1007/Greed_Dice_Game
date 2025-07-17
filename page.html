@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="index.html"><button>HOME</button></a>
 <button id="rulesBtn" onclick="rules()"> RULES </button>
+
 <div id="begin"> 
 <!-- START OF Starting Number / ROUND 1 -->
    <!-- --------------------------------------------->
@@ -32,7 +34,7 @@
  <!-- Dice Div end -->
 
   <!-- Display for the starting number start-->
-    <div id="startNum"> Starting Number:  </div>
+    <div id="startNum"> <h2> Starting Number:  </h2> </div>
   <!-- Display for the starting number end-->
 
 
@@ -58,6 +60,7 @@
     <!-- Then it will disappear when the user rolls for Round 1-->
     <button id="conBtn" onclick="start()"> START ROUND 1 </button>
     <div id="endResults1"></div>
+    <div id="endResults1Con"></div>
 
            <!-- This button will end Round 1-->
          <button id="endBtn2" onclick="end2()"> DONE </button>
@@ -104,6 +107,7 @@
 <!-- Div for the total amount from the dice and starting number end-->
 
     <div id="endResults2"></div>
+    <div id="endResults2Con"></div>
                    <!-- This button will end Round 2-->
          <button id="endBtn3" onclick="end3()"> DONE </button>
 
@@ -142,6 +146,7 @@
 <!-- Round 3 ends-->
      <div id="results3"> 
      </div>
+     <div id="endResults3Con"></div>
 <!-- Will reveal whether the user won or lost-->
 
  

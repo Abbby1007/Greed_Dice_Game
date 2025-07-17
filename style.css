@@ -10,15 +10,64 @@ text-align: center;
 
 } */
 
+#start{
+    background-color: #8eb15c;
+}
+#start:hover {
+    background-color: #D6FAC3;
+    color: black;
+}
+#tryAgain:hover {
+    background-color: #F8858B;
+    color: grey;
+}
+button{
+border-radius: 8px;
+text-align: center;
+font-size: 1rem;
+background-color: black;
+color:white;
+}
+
+button:hover {
+    background-color: #636363;
+    color: black;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+#final{
+     /* text-decoration: underline;
+      text-decoration-color: #FDDD5C; */
+    color:	#FDDD5C;
+    font-size: 1.75rem;
+}
+
+#tryAgain{
+    background-color: #FF6663;
+    color:black;
+    font-weight: bold;
+}
 img{
-    width:10%;
-    height:10%;
+    width:5%;
+    height:5%;
 }
 body{
-   background-color: 	#efdff9; 
+   background-color: 	#9EC6F3; 
 }
 #begin{
-    background-color: #e7d0f5;
+    /* background-color: #e7d0f5; */
+    background-color: 	#9EC6F3; 
     border-radius: 8px;
     border-color: black;
   border-style: solid;
@@ -26,7 +75,8 @@ body{
 }
 
 #round2{
-    background-color: #dcc0ec ;
+    /* background-color: #dcc0ec ; */
+    background-color: 	#9EC6F3; 
     border-radius: 8px;
     border-color: black;
     border-style: solid;
@@ -34,15 +84,29 @@ body{
 }
 
 #round3{
-    background-color:#ccaedb ;
+    /* background-color:#ccaedb ; */
+    background-color: 	#9EC6F3; 
     border-radius: 8px;
     border-color: black;
     border-style: solid;
     border-width: thin medium;
 }
+
+/* START of different types of Text ---------------*/
 #rules{
-    font-size: 3rem;
+    font-size: 1.25rem;
 }
+
+#startNum{
+    color: #304674;
+    font-size: 1.75rem;
+}
+
+#totalS{
+    color:#224623;
+    font-size:1.75rem;
+}
+/* END of different types of Text ---------------*/
 
 h1{
     text-align: center;
