@@ -72,9 +72,9 @@ document.getElementById("startNum").innerHTML = `<h2> Starting Number: ${Startin
 
 document.getElementById('roll').style.visibility = 'hidden';
 
-document.getElementById("firstBut").innerHTML = `<h3> You now have your staring number. The Rules are: </h3>
+document.getElementById("firstBut").innerHTML = `<h3> You now have your starting number. The Rules are: </h3>
 <h3> You will have a total of 3 Rounds to get the highest Score possible </h3>
-<h3> In each round if the six roll a total of more then 20 you loose all your points and only keep the starting number </h3> 
+<h3> In each round if the six dice roll a total of more then 20 you loose all your points and only keep the starting number </h3> 
 <h3> You can choose to not move on to the next round and keep your score by pressing "DONE" at the end of each round</h3>
 <h3>  After clicking "Start Round 1" the rules will disappear  </h3>
 <h3> To make them appear again click the "RULES" button </h3>
@@ -125,9 +125,9 @@ document.getElementById('endBtn3').style.visibility = 'hidden';
 
 // rules function start -----
 function rules(){
-  document.getElementById("firstBut").innerHTML = `<h3> You now have your staring number. The Rules are: </h3>
+  document.getElementById("firstBut").innerHTML = `<h3> You now have your starting number. The Rules are: </h3>
 <h3> You will have a total of 3 Rounds to get the highest Score possible </h3>
-<h3> In each round if the six roll a total of more then 20 you loose all your points and only keep the starting number </h3> 
+<h3> In each round if the six dice roll a total of more then 20 you loose all your points and only keep the starting number </h3>
 <h3> You can choose to not move on to the next round and keep your score by pressing "DONE" at the end of each round</h3>
 <h3> click "CLOSE" to make the rules disappear </h3>
 `  
@@ -325,7 +325,8 @@ else{
     Total Score (Diceroll + starting Number): ${round3Score} </h4>`
     
  document.getElementById("results3").innerHTML = `<h4>  The dice total is under 20. </h4>
-  <h4 id="final"> congrats you have a final score of: ${round3Score} </h4>` 
+  <h4 id="final"> congrats you have a final score of: ${round3Score} </h4>
+  <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>` 
 
 if(round3Score > highScore){
 highScore = round3Score;

@@ -12,6 +12,11 @@ text-align: center;
 
 #start{
     background-color: #8eb15c;
+     margin: 0px, 0px, 20px, 0px;
+ display: block;
+    margin: auto;
+    width: fit-content;;
+height:2rem;
 }
 #start:hover {
     background-color: #D6FAC3;
@@ -23,10 +28,15 @@ text-align: center;
 }
 button{
 border-radius: 8px;
+width: fit-content;;
+height:2rem;
 text-align: center;
 font-size: 1rem;
 background-color: black;
 color:white;
+ margin: 0px, 0px, 20px, 0px;
+ display: block;
+    margin: auto;
 }
 
 button:hover {
