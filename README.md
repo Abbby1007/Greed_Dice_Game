@@ -4,6 +4,6 @@ Description: Second Athena Award  project. This is a website version of a dice g
 
 Link To Play: https://abbby1007.github.io/Greed_Dice_Game/
 
-How To Play: Click "Start" Then jsut follow the instructions. Click "Roll" To Roll the Dice.
+How To Play: Click "Start" then just follow the instructions. Click "Roll" To Roll the Dice.
 
 DON'T WORRY IT IS POSSIBLE TO GET TO ROUND 3, IT JUST TAKES ALOT OF LUCK AND PATIENCE
