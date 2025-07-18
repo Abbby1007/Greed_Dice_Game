@@ -1,6 +1,6 @@
-Greed Dice Web game 
+Greed Dice Web game (#2 Hack Club Athena Award Project)
 
-Second Athena Award Project
+Description: Second Athena Award  project. This is a website version of a dice game called "Greed" I would play in my Ap statistics class
 
 Link To Play: https://abbby1007.github.io/Greed_Dice_Game/
 
