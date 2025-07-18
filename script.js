@@ -188,6 +188,7 @@ document.getElementById('conBtn').style.visibility = 'hidden';
 if(totalRoll > 20){
     document.getElementById("endResults1").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
     <h4 id="final"> Your final score is : ${StartingNum}</h4>
+    <h4> It is possbile to get to Round 3 it just takes alot of patience and luck </h4>
     <h4> Click "TRY AGAIN" to try an get a higher score </h4>
 <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 
@@ -253,7 +254,8 @@ document.getElementById("startNum2").innerHTML = `<h2> Starting Number: ${Starti
 
     if(totalRoll > 20){
     document.getElementById("endResults2").innerHTML = `<h4> Sorry you're dice roll was greater than 20 </h4> 
-    <h4 id="final"> Your final score is : ${StartingNum}</h4> 
+    <h4 id="final"> Your final score is : ${StartingNum}</h4>
+     <h4> It is possbile to get to Round 3 it just takes alot of patience and luck </h4> 
      <h4> Click "TRY AGAIN" to try an get a higher score </h4>
      <a href="page.html"><button id="tryAgain">TRY AGAIN </button> </a>`
 if(StartingNum > highScore){
