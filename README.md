@@ -1,6 +1,6 @@
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
 
-Greed Dice Web game (#2 Hack Club Athena Award Project)
+<b>Greed Dice Web game</b> (#2 Hack Club Athena Award Project)
 
 <b>Description:</b> 0 Second Athena Award  project. This is a website version of a dice game called "Greed" I would play in my Ap statistics class
 
