@@ -74,7 +74,7 @@ document.getElementById('roll').style.visibility = 'hidden';
 
 document.getElementById("firstBut").innerHTML = `<h3> You now have your starting number. The Rules are: </h3>
 <h3> You will have a total of 3 Rounds to get the highest Score possible </h3>
-<h3> In each round if the six dice roll a total of more then 20 you loose all your points and only keep the starting number </h3> 
+<h3> In each round if the six dice roll a total of more than 20 you loose all your points and only keep the starting number </h3> 
 <h3> You can choose to not move on to the next round and keep your score by pressing "DONE" at the end of each round</h3>
 <h3>  After clicking "Start Round 1" the rules will disappear  </h3>
 <h3> To make them appear again click the "RULES" button </h3>
@@ -127,7 +127,7 @@ document.getElementById('endBtn3').style.visibility = 'hidden';
 function rules(){
   document.getElementById("firstBut").innerHTML = `<h3> You now have your starting number. The Rules are: </h3>
 <h3> You will have a total of 3 Rounds to get the highest Score possible </h3>
-<h3> In each round if the six dice roll a total of more then 20 you loose all your points and only keep the starting number </h3>
+<h3> In each round if the six dice roll a total of more than 20 you loose all your points and only keep the starting number </h3>
 <h3> You can choose to not move on to the next round and keep your score by pressing "DONE" at the end of each round</h3>
 <h3> click "CLOSE" to make the rules disappear </h3>
 `  
