@@ -2,7 +2,7 @@
 
 <b>Greed Dice Web game</b> (#2 Hack Club Athena Award Project)
 
-<b>Description:</b> 0 Second Athena Award  project. This is a website version of a dice game called "Greed" I would play in my Ap statistics class
+<b>Description:</b> Second Athena Award  project. This is a website version of a dice game called "Greed" I would play in my Ap statistics class
 
 <b>Game Rules:</b> After you roll a starting number you will have a total of 3 Rounds to get the highest Score possible.
 In each round if the six dice roll a total of more than 20 you loose all your points and only keep the starting number.
