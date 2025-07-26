@@ -17,5 +17,12 @@ My Highest Score is <b>126</b>
 <b>How To Play:</b> Click "Start" then just follow the instructions. Click "Roll" To Roll the Dice.
 
 
+Video Documentation (Videos to show the progress of this website):
+7/9/2025 (21:39:40)
+https://github.com/user-attachments/assets/08146fec-458e-4be5-a36c-6f236b0ee908
+
+
+
+
 
 
